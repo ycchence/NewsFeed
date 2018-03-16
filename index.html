@@ -1,0 +1,97 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule Appointment</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="show.js">   </script>  
+    <script src="show1.js">   </script>
+    <script type="text/javascript" src="ajaxindex.js"></script> 
+
+</head>
+
+
+<div style="margin-top:3%" class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <h2>Post News!</h2>
+        <form action="addAppointment.php"  method="post" id="form" role="form" style="margin-top: 5%">
+            <div class="form-group">
+                <label for="pid">Item:</label>
+                <input type="text" name="pid" id="pid" class="form-control" style="width:300px;height:30px;" required />
+            </div>
+            <div class="form-group">
+                <label for="did">Content:</label>
+                <input type="text" name="did" id="did" class="form-control"  style="width:400px;height:30px;" required />
+            </div>
+
+
+            <div class="form-actions">
+                <button id="createApp" type="submit" class="btn btn-primary">Post</button>
+            </div>
+        </form>
+
+        
+
+        <script type="text/javascript" src="ajaxindex.js"></script>  
+
+        <script type="text/javascript">  
+             Showitem();
+             refresh();
+             ptime();
+          //   setInterval("Showitem()",1000);        
+          //   setInterval("refresh()",2000);  
+        </script> 
+        
+
+
+     
+
+
+        <form action="picker.php" method="post" id="form2" style="margin-top: 5%">
+                
+                <div class="formgroup">
+                    <label for="app_d">Choose a Date: (Remaining empty will show all news.)</label>
+                    <div class="row">
+                            <div class="col-md-4"><input type="Date" name="app_d" id="app_d" class="form-control"/></div>
+                    </div>
+                </div>
+
+                <div class="formactions">
+                    <button id="create" type="submit" class="btnbtnprimary">Filter</button>
+                </div>
+        </form>
+
+
+
+
+        <!--10 News list there-->
+        <h3>News: Click a item to access the content! </h3>
+        <div id="screen">
+                <div id="itemid0" class="demo">                 </div>
+                <div id="itemid1" class="demo">                 </div>
+                <div id="itemid2" class="demo">                 </div>
+                <div id="itemid3" class="demo">                 </div>
+                <div id="itemid4" class="demo">                 </div>
+                <div id="itemid5" class="demo">                 </div>
+                <div id="itemid6" class="demo">                 </div>
+                <div id="itemid7" class="demo">                 </div>
+                <div id="itemid8" class="demo">                 </div>
+                <div id="itemid9" class="demo">                 </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
